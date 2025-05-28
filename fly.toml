@@ -1,0 +1,16 @@
+app = "valetnetdemo"
+primary_region = "ord"
+
+[build]
+dockerfile = "Dockerfile"
+
+[http_service]
+internal_port = 7777
+force_https = true
+
+[[vm]]
+memory_mb = 512
+
+[mounts]
+source = "strfry_data"
+destination = "/app/strfry-db"
